@@ -1,0 +1,164 @@
+/* Global */
+*
+{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto Condensed', sans-serif;
+}
+
+body
+{
+   margin: 0 ;
+   padding: 0;
+}
+
+.container-fluid
+{
+   padding: 0;
+}
+
+.main
+{
+
+   margin: 0 auto;
+   width: 100%;
+   height: auto;
+   padding-bottom: 30px;
+}
+
+/* background */
+
+#accueil, #connexion, #inscription, #validation, #resultat
+{
+   background-image: url("../image/ocean4.jpg");
+   background-size: cover;
+}
+
+#france
+{
+   background-image: url("../image/pays/France/fond1.jpg");
+   background-size: cover;
+}
+
+
+
+/* menu header */
+
+header
+{
+   width:100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 30px;
+}
+
+.menu
+{
+   background-color: #26495c;
+   border-radius: 3px;
+}
+
+.bg-info
+{
+   background-color: #26495c;
+}
+
+.nav-item:hover
+{
+   color: red;
+}
+
+/* Pays */
+
+.taille
+{
+   width: 400px;
+   height: 600px;
+   border-radius: 5px;
+}
+
+/* formulaire de recherche */
+
+.cadre
+{
+   background-color: #26495c;
+   margin: 80px auto;
+   min-width: 450px;
+   padding: 20px;
+   color: whitesmoke;
+   border-radius: 5px;
+}
+
+/* footer */
+
+
+.card
+{
+   border: none;
+   background-color: #26495c;
+}
+
+.bleu
+{
+   color: #355fb9;
+}
+
+.rouge
+{
+   color: rgb(180, 34, 34);
+}
+
+.bleuclair
+{
+   color: aqua;
+}
+
+
+
+/* flex */
+
+.flex
+{
+   display: flex;
+}
+
+.row
+{
+    flex-direction: row;
+}
+
+.column
+{
+   flex-direction: column;
+}
+
+.wrap
+{
+   flex-wrap: wrap;
+}
+
+.justif-between
+{
+   justify-content: space-between;
+}
+
+.justif-around
+{
+   justify-content: space-around;
+}
+
+.justif-evenly 
+{
+   justify-content: space-evenly;
+}
+
+.centre
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
