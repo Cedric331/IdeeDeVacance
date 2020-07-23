@@ -6,7 +6,7 @@ if(isset($_GET['mois']) OR (isset($_GET['continent'])) OR (isset($_GET['prix']))
 }
 
 ?>
-<h1>HE</h1>
+
 <section class="container cadre w-50">
    <h2>Indiquez vos préférences</h2>
    <form method="GET" action="">
