@@ -39,7 +39,7 @@ if (isset($_GET['action']))
       <!-- header -->
       <header class="container-fluid sticky-top">
          <nav class="navbar navbar-expand-lg navbar-light text-white menu">
-            <a class="navbar-brand text-white" href="?action=accueil">IdéeDeVoyage.fr</a>
+            <a class="navbar-brand text-white" href="accueil">IdéeDeVoyage.fr</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -48,13 +48,13 @@ if (isset($_GET['action']))
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                     <a class="nav-link text-white" href="?action=france">Liste des Pays</a>
+                     <a class="nav-link text-white" href="france">Liste des Pays</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link text-white" href="?action=annonce">Annonces</a>
+                     <a class="nav-link text-white" href="annonce">Annonces</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link text-white" href="?action=forum">Forum</a>
+                     <a class="nav-link text-white" href="forum">Forum</a>
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
@@ -62,13 +62,13 @@ if (isset($_GET['action']))
                         Mon compte
                      </a>
                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="?action=connexion">Se connecter</a>
-                        <a class="dropdown-item d-none" href="?action=moncompte">Gérer mon compte</a>
+                        <a class="dropdown-item" href="connexion">Se connecter</a>
+                        <a class="dropdown-item d-none" href="moncompte">Gérer mon compte</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="?action=inscription">S'inscrire</a>
-                        <a class="dropdown-item d-none" href="?action=deconnexion">Se déconnecter</a>
+                        <a class="dropdown-item" href="inscription">S'inscrire</a>
+                        <a class="dropdown-item d-none" href="deconnexion">Se déconnecter</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="?action=pro">Compte pro</a>
+                        <a class="dropdown-item" href="comptepro">Compte pro</a>
                      </div>
                   </li>
                </ul>
@@ -101,7 +101,7 @@ if (isset($_GET['action']))
                <div class="card">
                   <div class="card-body flex column">
                      <h5 class="card-title centre text-white">À propos de IdéeDeVoyage.fr</h5>
-                     <a href="#" class="btn btn-body text-white">Qui sommes-nous ?</a>
+                     <a href="quisommesnous" class="btn btn-body text-white">Qui sommes-nous ?</a>
                      <a href="#" class="btn btn-body text-white">Nos engagements</a>
                      <a href="#" class="btn btn-body text-white">Conditions générales</a>
                      <a href="#" class="btn btn-body text-white">Politique de confidentialité</a>

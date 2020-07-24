@@ -29,13 +29,13 @@ body
 
 /* background */
 
-#accueil, #connexion, #inscription, #validation, #resultat
+#accueil, #connexion, #inscription, #validation, #resultat, #quisommesnous, #comptepro
 {
    background-image: url("../image/ocean4.jpg");
    background-size: cover;
 }
 
-#france
+#france, #quisommesnous
 {
    background-image: url("../image/pays/France/fond1.jpg");
    background-size: cover;
@@ -160,5 +160,4 @@ header
     display: flex;
     justify-content: center;
 }
-
 
