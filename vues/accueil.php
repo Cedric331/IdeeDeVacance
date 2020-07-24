@@ -2,7 +2,7 @@
 <?php 
 if(isset($_GET['mois']) OR (isset($_GET['continent'])) OR (isset($_GET['prix'])))
 {
-   header("Location:http://developpement/Id%c3%a9e_Voyage/resultat"); 
+   header("Location:http://developpement/PHP/GIT/ideedevacance/resultat"); 
 }
 
 ?>

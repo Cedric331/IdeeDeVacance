@@ -1,10 +1,8 @@
 <?php
 
 
-   // Si tout va bien, on peut continuer
-
-   // On récupère tout le contenu de la table jeux_video
-   $reponse = $bdd->query('SELECT * FROM jeux_video LIMIT 0,10');
+// On récupère tout le contenu de la table jeux_video
+$reponse = $bdd->query('SELECT * FROM jeux_video LIMIT 0,10');
 
 
 

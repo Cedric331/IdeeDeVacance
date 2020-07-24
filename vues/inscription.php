@@ -1,6 +1,23 @@
+<?php 
+if(isset($_POST['mail']) AND isset($_POST['utilisateur']) AND isset($_POST['password']) AND isset($_POST['confirm_password']))
+   {
+      inscription($_POST['mail'],$_POST['utilisateur'],$_POST['password'],$_POST['confirm_password']);
+   }
+      else
+      {
+         echo "Vous n'avez pas remplie les champs";
+      }
+
+      // $mail = $_GET['mail'];
+      // $utilisateur = $_GET['utilisateur'];
+      // $password = $_GET['password'];
+      // $confirm_password = $_GET['confirm_password'];
+?>
+
+
 <div class="container cadre w-50">
    <h2>Formulaire d'inscription</h2>
-   <form method="GET" action="vues/traitement.php">
+   <form method="POST" action="">
       <div class="form-group">
          <label for="mail">Adresse email : </label>
          <input type="email" class="form-control" id="mail" placeholder="Votre adresse email" name="mail">

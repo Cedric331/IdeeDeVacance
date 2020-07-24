@@ -4,16 +4,11 @@ function inscription($mail, $identifiant, $password, $confirm_password)
 {
    if ($password != $confirm_password)
       {
-         echo "Mot de passe non valide";
-         header("Location: http://developpement/Id%c3%a9e_Voyage/?action=inscription");
+         header("Location: http://developpement/PHP/GIT/ideedevacance/inscription");
          exit;
       }
-   else
-      {
-         echo "Inscription validée";
-         $validation = "d-block";
-         header("Location: http://developpement/Id%c3%a9e_Voyage/?action=validation");
+
+         header("Location: http://developpement/PHP/GIT/ideedevacance/validation");
          exit;
-      }
 }
 ?>

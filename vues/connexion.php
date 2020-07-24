@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <div class="container cadre w-50">
    <h2>Connexion</h2>
    <form method="POST" action="">
