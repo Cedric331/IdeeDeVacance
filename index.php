@@ -1,19 +1,7 @@
 <?php require('modele.php'); 
 
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=jeuxvideo;charset=utf8', 'root', '');
-}
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-}
 
 
-?>
-
-
-<?php 
 
 if(isset($_GET['action'])) 
    {
@@ -47,6 +35,12 @@ switch ($action)
    case 'connexion':
       ob_start();
       require ('vues/connexion.php');
+      $content = ob_get_clean(); 
+      break;
+
+   case 'forum':
+      ob_start();
+      require ('vues/forum.php');
       $content = ob_get_clean(); 
       break;
 

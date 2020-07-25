@@ -1,10 +1,15 @@
 <?php
-
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=jeuxvideo;charset=utf8', 'root', '');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
 
 // On récupère tout le contenu de la table jeux_video
 $reponse = $bdd->query('SELECT * FROM jeux_video LIMIT 0,10');
-
-
 
 
 // On affiche chaque entrée une à une
@@ -12,8 +17,8 @@ while ($donnees = $reponse->fetch())
 {
 ?>
 <div class="card-deck centre">
-   <div class="card col-4 ">
-      <div class="card-body ">
+   <div class="card col-4">
+      <div class="card-body">
          <h5 class="card-title"><strong>Jeu</strong> : <?php echo $donnees['nom']; ?></h5>
          <p class="card-text">
             Le possesseur de ce jeu est : <?php echo $donnees['possesseur']; ?>, et il le vend à

@@ -29,7 +29,7 @@ body
 
 /* background */
 
-#accueil, #connexion, #inscription, #validation, #resultat, #quisommesnous, #comptepro
+#accueil, #connexion, #inscription, #validation, #resultat, #quisommesnous, #comptepro, #forum
 {
    background-image: url("../image/ocean4.jpg");
    background-size: cover;
