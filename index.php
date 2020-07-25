@@ -50,11 +50,11 @@ switch ($action)
       $content = ob_get_clean(); 
       break;
 
-      case 'quisommesnous':
-         ob_start();
-         require ('vues/quisommesnous.php');
-         $content = ob_get_clean(); 
-         break;
+   case 'quisommesnous':
+      ob_start();
+      require ('vues/quisommesnous.php');
+      $content = ob_get_clean(); 
+      break;
 
    case 'resultat':
       ob_start();

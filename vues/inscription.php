@@ -1,20 +1,3 @@
-<?php 
-if(isset($_POST['mail']) AND isset($_POST['utilisateur']) AND isset($_POST['password']) AND isset($_POST['confirm_password']))
-   {
-      inscription($_POST['mail'],$_POST['utilisateur'],$_POST['password'],$_POST['confirm_password']);
-   }
-      else
-      {
-         echo "Vous n'avez pas remplie les champs";
-      }
-
-      // $mail = $_GET['mail'];
-      // $utilisateur = $_GET['utilisateur'];
-      // $password = $_GET['password'];
-      // $confirm_password = $_GET['confirm_password'];
-?>
-
-
 <div class="container cadre w-50">
    <h2>Formulaire d'inscription</h2>
    <form method="POST" action="">
@@ -28,7 +11,7 @@ if(isset($_POST['mail']) AND isset($_POST['utilisateur']) AND isset($_POST['pass
       </div>
       <div class="form-group">
          <label for="password">Mot de passe : </label>
-         <input type="password" class="form-control" id="password" placeholder="Mot de passe" name="password">
+         <input type="password" class="form-control" id="password" placeholder="Mot de passe" name="password" pattern=".{8,}" required title="8 caracteres minimum">
       </div>
       <div class="form-group">
          <label for="confirm_password">Confirmation du mot de passe : </label>
@@ -37,4 +20,40 @@ if(isset($_POST['mail']) AND isset($_POST['utilisateur']) AND isset($_POST['pass
       <button type="submit" class="btn btn-primary">S'inscrire</button>
    </form>
 </div>
+
+
+<?php
+// Verification si les variables existent
+if (isset($_POST['mail']) AND isset($_POST['utilisateur']) AND isset($_POST['password']) AND isset($_POST['confirm_password']))
+{
+   if (strlen($_POST['password']) < 6) 
+   {
+      echo "Mot de passe trop court !";
+   }
+   else
+   {
+               // Verification si les variables contiennent des données 
+      if (empty($_POST['mail']) OR empty($_POST['utilisateur']) OR empty($_POST['password']) OR empty($_POST['confirm_password']))
+         {
+         echo "<div class=\"container-fluid centre\"><h3>Il manque des infos --  Aucun ajout</h3></div>";
+         }
+      else
+         {
+            sleep(2);
+            // Valide une adresse de courriel.
+            $mail = filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL);
+            // Supprime tous les caractères sauf les lettres, chiffres, et !#$%&'*+-=?^_`{|}~@.[].
+            $email = filter_var($mail,FILTER_SANITIZE_EMAIL); 
+            $utilisateur = filter_var($_POST['utilisateur'],FILTER_SANITIZE_FULL_SPECIAL_CHARS, FILTER_FLAG_NO_ENCODE_QUOTES );
+            $password = filter_var($_POST['password'],FILTER_SANITIZE_FULL_SPECIAL_CHARS, FILTER_FLAG_NO_ENCODE_QUOTES );
+            $confirm_password = filter_var($_POST['confirm_password'],FILTER_SANITIZE_FULL_SPECIAL_CHARS, FILTER_FLAG_NO_ENCODE_QUOTES );
+            $valide = inscription($email,$utilisateur,$password,$confirm_password);
+         }
+   }
+
+}
+
+
+
+?>
 
