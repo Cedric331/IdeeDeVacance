@@ -26,7 +26,7 @@
 // Verification si les variables existent
 if (isset($_POST['mail']) AND isset($_POST['utilisateur']) AND isset($_POST['password']) AND isset($_POST['confirm_password']))
 {
-   if (strlen($_POST['password']) < 6) 
+   if (strlen($_POST['password']) < 6)
    {
       echo "Mot de passe trop court !";
    }
